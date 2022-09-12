@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Subwords</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script>
+function showBlock(blockname)
+{
+	document.getElementById("main_div").style.display = "none";
+	document.getElementById("about_us").style.display = "none";
+	document.getElementById("contact_us").style.display = "none";
+	document.getElementById("phone_pic").style.display = "none";
+	var item = document.getElementById(blockname);
+	item.style.display = "block";
+	if(blockname === "main_div")
+	{
+		document.getElementById("phone_pic").style.display = "block";
+	}
+}
+</script>
+
+<style>
+
+body
+{
+	background-image: url("bckg.png");
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	background-attachment: fixed;
+	background-size: cover;
+	
+	font-family: "Arial Rounded MT", Arial, Helvetica, sans-serif;;
+	font-weight: bold;
+}
+
+.center_vertical
+{
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.outer {
+  display: table;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.middle {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.inner {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header
+{
+	height: 64px;
+	line-height: 64px;
+	font-size:20px;
+}
+
+footer
+{
+	position: fixed;
+	bottom: 0;
+	width: 98%;
+	height: 64px;
+	line-height: 64px;
+}
+
+.start_text
+{
+	margin: -20px;
+    padding: 0;
+}
+
+.app_store_button
+{
+	margin: 10px;
+}
+
+#s_1
+{
+	font-size:56px;
+	color: #5A7837;	
+}
+
+#s_2
+{
+	font-size:96px;
+	margin: 0;
+    padding: 0;
+}
+
+#s_3
+{
+	font-size:40px;
+	color: #5A7837;
+	margin-bottom: 100px;
+}
+
+#footer_copyright
+{
+	text-align: center;
+	left: 50%;
+	position: fixed;
+	margin-left: -150px;
+	width:300px;
+}
+
+.right
+{
+	float: right;
+	
+}
+
+.left
+{
+	float: left;
+}
+
+.header_item_right
+{
+	float: right;
+	color: black;
+	margin: 0px 25px 0px 0px;
+}
+
+.header_item
+{
+	color: black;
+}
+
+.language_icon
+{
+	margin: 0px 5px 0px 0px;
+}
+
+#small_icon
+{
+	width: 77px;
+	height: 61px;
+}
+
+.td_about
+{
+	vertical-align: top;
+}
+
+#phone_pic
+{
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	background-image: url("phones.png");
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	background-attachment: fixed;
+	background-size: cover;
+	z-index: -1;
+
+  <!-- /* Center and scale the image nicely */ -->
+  <!-- background-position: center; -->
+  <!-- background-repeat: no-repeat; -->
+  <!-- background-size: cover; -->
+}
+
+.info_text
+{
+	text-align: left;
+	font-size: 20px;
+}
+
+.info_text_header
+{
+	text-align: left;
+	font-size: 40px;
+}
+
+#about_us
+{
+	width: 1050px;
+}
+
+#contact_us
+{
+	width: 850px;
+}
+
+.contact_row
+{
+	height: 150px;
+}
+
+.contact_column
+{
+	padding: 0px 20px 0px 0px;
+	width: 550px;
+}
+
+#header_text_about
+{
+
+}
+
+#header_text_contact
+{
+	text-align: left;
+	font-size: 40px;
+}
+
+.no_vertical_margin
+{
+	margin: 0;
+}
+
+
+.green_button
+{
+	width: 327px;
+	background-color: #72BC5A;
+	color: #456132;
+	border-radius: 10px;
+	height: 100px;
+	font-size: 22px;
+}
+
+#soon
+{
+	font-size: 30px;
+}
+
+a
+{
+	vertical-align: center;
+	text-decoration: none;
+}
+
+</style>
+</head>
+<body>
+
+	<div id="phone_pic"></div>
+
+	<header>
+		<a class="header_item left" href="#" onclick="showBlock('main_div');return false;"><img src="icon_big.png" id="small_icon"/></a>	
+		<a class="header_item left" href="#" onclick="showBlock('main_div');return false;">SUBWORDS</a>			
+		<a class="header_item_right" href="#" onclick="showBlock('contact_us');return false;">Contact us</a>
+		<a class="header_item_right" href="#" onclick="showBlock('about_us');return false;">About us</a>
+		<a class="header_item_right" href="#" onclick="showBlock('main_div');return false;">Home</a>
+	</header>
+	
+	<main class="">		
+		<div class="center_vertical">				
+			<div id="main_div" class="">	
+					<p id="s_1" class="start_text">Welcome to</span>
+					<p id="s_2" class="start_text">SUBWORDS!</span>
+					<p id="s_3" class="start_text">A fun and challenging word game!</p>
+					<a href="https://www.w3schools.com/"><img src="button1.png" class="app_store_button" /></a><br>
+					<a href="https://www.w3schools.com/"><img src="button2.png" class="app_store_button" /></a>
+			</div>	
+			<div id="about_us" class="" style="display: none" >				
+				<table>
+				  <!-- <tr> -->
+					<!-- <th></th> -->
+					<!-- <th></th> -->
+				  <!-- </tr> -->
+				  <tr>
+					<td class="td_about"><img src="icon_big.png" class="vertical_align" /></td>
+					<td class="td_about">
+						<h1 class="info_text_header" id="header_text_about">About Us</h1>
+						<p class="info_text">Subwords was created and is owned by Elitsia AB, a Swedish company based in Gothenburg. The game was launched in December 2021 and in 2022 the plan is to release two other apps, a quiz game and a global dating app.</p>
+						<p class="info_text">We hope you like our game and we appreciate any feedback you would like to share so that we know how we can improve and develop the app further.</p>  
+						<p class="info_text">Good luck to beat your friends in multiplayer mode and we also hope you will be one of the few players who are able to pass all of the 100 levels.</p>		
+					</td>
+				  </tr>
+				</table>				
+			</div>
+			<div id="contact_us" style="display: none" >							
+				<table>
+				  <tr class="">
+					<td class=""><h2 id="header_text_contact">Contact Us</h2></td>					
+				  </tr>
+				  <tr class="contact_row">
+					<td class="contact_column"><p class="info_text no_vertical_margin">Do you have any questions related to the game or maybe have ideas or feedback to share, you are very welcome to send an e-mail to:</p></td>
+					<td><button class="green_button">hello@subwords.com</button></td>
+				  </tr>
+				   <tr class="contact_row">
+					<td class="contact_column"><p class="info_text no_vertical_margin">For press and media inquiries <br> please send an e-mail to:</p></td>
+					<td><button class="green_button">media@subwords.com</button></td>
+				  </tr>
+				  <tr class="contact_row">
+					<td class="contact_column"><p class="info_text no_vertical_margin">For partnership enquiries please <br> send an e-mail to:<p></td>
+					<td><button class="green_button">partners@subwords.com</button></td>
+				  </tr>
+				  <tr>
+					<td id="td_soon"></td>
+				  </tr>
+				</table>
+				<p class="info_text" id="soon">We will answer you as soon as we can!<p>
+			</div>	
+		</div>	
+
+	</main>
+	<footer>
+		<span id="footer_copyright">© Copyright 2021 - Elitsia AB</span>
+		<a class="right language_icon" href="https://www.w3schools.com/"><img src="ger.png" /></a>
+		<a class="right language_icon" href="https://www.w3schools.com/"><img src="swe.png" /></a>
+		<a class="right language_icon" href="https://www.w3schools.com/"><img src="eng.png" /></a>	
+	</footer>
+	
+	
+	
+</body>
+</html>
