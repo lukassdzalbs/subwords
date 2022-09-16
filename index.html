@@ -61,7 +61,9 @@ const  translationsSwe =
 	'i_contact_p_1': 'Har du några frågor relaterat till spelet eller kanske har idéer eller feedback <br> att dela med dig av så är du hjärtligt välkommen att skicka ett mejl till oss:',
 	'i_contact_p_2': 'För press- och mediaförfrågningar, vänligen <br> skicka ett e-postmeddelande till:',
 	'i_contact_p_3': 'För frågor om partnerskap, vänligen <br> skicka ett e-postmeddelande till:',
-	'soon': 'Vi svarar dig så fort vi kan!'	
+	'soon': 'Vi svarar dig så fort vi kan!',	
+	'i_avail_1': 'Finns på',
+	'i_avail_2': 'Finns på'
 }
 
 const  translationsEng = 
@@ -80,7 +82,9 @@ const  translationsEng =
 	'i_contact_p_1': 'Do you have any questions related to the game or maybe have ideas or feedback to share, you are very welcome to send an e-mail to:',
 	'i_contact_p_2': 'For press and media inquiries <br> please send an e-mail to:',
 	'i_contact_p_3': 'For partnership enquiries please <br> send an e-mail to:',
-	'soon': 'We will answer you as soon as we can!'	
+	'soon': 'We will answer you as soon as we can!',	
+	'i_avail_1': 'Available on the',
+	'i_avail_2': 'Available on the'
 }
 
 const  translationsGer = 
@@ -99,7 +103,9 @@ const  translationsGer =
 	'i_contact_p_1': 'Haben Sie Fragen zum Spiel oder vielleicht Ideen oder Feedback, die Sie uns mitteilen möchten, können Sie gerne eine E-Mail senden an:',
 	'i_contact_p_2': 'Für Presse- und Medienanfragen <br> senden Sie bitte eine E-Mail an:',
 	'i_contact_p_3': 'Für Partnerschaftsanfragen <br> senden Sie bitte eine E-Mail an:',
-	'soon': 'Wir werden Ihnen so schnell wie möglich antworten!'	
+	'soon': 'Wir werden Ihnen so schnell wie möglich antworten!',	
+	'i_avail_1': 'Verfügbar auf der',
+	'i_avail_2': 'Verfügbar auf der'
 }
 
 
@@ -174,6 +180,42 @@ footer
 .app_store_button
 {
 	margin: 10px;
+	background-color: #72BC5A;
+	border: 2px solid #456132;
+	border-radius: 10px;
+	width: 256px;
+	height: 90px;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	text-align: center;
+	position: relative;
+}
+
+#i_avail_1
+{
+	position: relative;
+	top: 15px; 
+	left: 20px;
+	color: #456132;
+}
+
+#i_avail_2
+{
+	position: relative;
+	top: 7px; 
+	left: 20px;
+	color: #456132;
+}
+
+#i_appstore
+{
+	margin-bottom: 10px;
+}
+
+#i_google
+{
+	margin-bottom: 0px;
 }
 
 #s_1
@@ -353,8 +395,8 @@ a
 					<p id="s_1" class="start_text">Welcome to</span>
 					<p id="s_2" class="start_text">SUBWORDS!</span>
 					<p id="s_3" class="start_text">A fun and challenging word game!</p>
-					<a href="https://www.w3schools.com/"><img src="button1.png" class="app_store_button" /></a><br>
-					<a href="https://www.w3schools.com/"><img src="button2.png" class="app_store_button" /></a>
+					<a href="https://www.w3schools.com/"><div class="app_store_button"><span id="i_avail_1" >Available on the</span><img id="i_appstore" src="appstore.png"  /> </div></a><br>
+					<a href="https://www.w3schools.com/"><div class="app_store_button"><span id="i_avail_2" >Available on the</span><img id="i_google" src="googleplay.png" /> </div></a>
 			</div>	
 			<div id="about_us" class="" style="display: none" >				
 				<table>
