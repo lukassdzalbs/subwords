@@ -19,6 +19,90 @@ function showBlock(blockname)
 		document.getElementById("phone_pic").style.display = "block";
 	}
 }
+
+function Translate(lang)
+{
+	if(lang === "en")
+	{
+		for(var key in translationsEng)
+		{
+			document.getElementById(key).innerHTML = translationsEng[key];
+		}
+	}
+	else if(lang === "se")
+	{
+		for(var key in translationsSwe)
+		{
+			document.getElementById(key).innerHTML = translationsSwe[key];
+		}
+	}
+	else if(lang === "ger")
+	{
+		for(var key in translationsGer)
+		{
+			document.getElementById(key).innerHTML = translationsGer[key];
+		}
+	}
+}
+
+const  translationsSwe = 
+{
+	"i_sub" : "SUBWORDS",
+	"i_contact" : "Kontakta oss",
+	'i_about' : 'Om oss',
+	'i_home' : 'Hem',
+	's_1': 'Välkommen till',
+	's_3': 'Ett roligt och utmanande ordspel!',
+	'header_text_about': 'Om Oss',
+	'i_about_p_1': 'Subwords skapades och ägs av Elitsia AB, ett svenskt företag baserat i Göteborg. Spelet lanserades i oktober 2022 och 2023 är planen att släppa två andra appar, ett frågesportspel och en global dejtingapp.',
+	'i_about_p_2': 'Vi hoppas att du gillar vårt spel och vi uppskattar all feedback du vill dela med dig av så att vi vet hur vi kan förbättra och utveckla appen ytterligare.',
+	'i_about_p_3': 'Lycka till att vinna över dina vänner i multiplayer-läget! Vi hoppas också att du lyckas bli en av få spelare som klarar alla 100 nivåer.',
+	'header_text_contact': 'Kontakta Oss',
+	'i_contact_p_1': 'Har du några frågor relaterat till spelet eller kanske har idéer eller feedback <br> att dela med dig av så är du hjärtligt välkommen att skicka ett mejl till oss:',
+	'i_contact_p_2': 'För press- och mediaförfrågningar, vänligen <br> skicka ett e-postmeddelande till:',
+	'i_contact_p_3': 'För frågor om partnerskap, vänligen <br> skicka ett e-postmeddelande till:',
+	'soon': 'Vi svarar dig så fort vi kan!'	
+}
+
+const  translationsEng = 
+{
+	"i_sub" : "SUBWORDS",
+	"i_contact" : "Contact us",
+	'i_about' : 'About us',
+	'i_home' : 'Home',
+	's_1': 'Welcome to',
+	's_3': 'A fun and challenging word game',
+	'header_text_about': 'About Us',
+	'i_about_p_1': 'Subwords was created and is owned by Elitsia AB, a Swedish company based in Gothenburg. The game was launched in December 2021 and in 2022 the plan is to release two other apps, a quiz game and a global dating app.',
+	'i_about_p_2': 'We hope you like our game and we appreciate any feedback you would like to share so that we know how we can improve and develop the app further.',
+	'i_about_p_3': 'Good luck to beat your friends in multiplayer mode and we also hope you will be one of the few players who are able to pass all of the 100 levels.',
+	'header_text_contact': 'Contact Us',
+	'i_contact_p_1': 'Do you have any questions related to the game or maybe have ideas or feedback to share, you are very welcome to send an e-mail to:',
+	'i_contact_p_2': 'For press and media inquiries <br> please send an e-mail to:',
+	'i_contact_p_3': 'For partnership enquiries please <br> send an e-mail to:',
+	'soon': 'We will answer you as soon as we can!'	
+}
+
+const  translationsGer = 
+{
+	"i_sub" : "SUBWORDS",
+	"i_contact" : "Kontaktiere uns",
+	'i_about' : 'Über uns',
+	'i_home' : 'Heim',
+	's_1': 'Willkommen zu',
+	's_3': 'Ein lustiges und herausforderndes Wortspiel',
+	'header_text_about': 'Über uns',
+	'i_about_p_1': 'Subwords wurde erstellt und gehört Elitsia AB, einem schwedischen Unternehmen mit Sitz in Göteborg. Das Spiel wurde im Dezember 2021 gestartet und im Jahr 2022 sollen zwei weitere Apps veröffentlicht werden, ein Quizspiel und eine globale Dating-App.',
+	'i_about_p_2': 'Wir hoffen, dass Ihnen unser Spiel gefällt, und freuen uns über jedes Feedback, das Sie teilen möchten, damit wir wissen, wie wir die App verbessern und weiterentwickeln können.',
+	'i_about_p_3': 'Viel Glück beim Besiegen deiner Freunde im Multiplayer-Modus und wir hoffen auch, dass du einer der wenigen Spieler sein wirst, die alle 100 Level bestehen können.',
+	'header_text_contact': 'Kontaktiere uns',
+	'i_contact_p_1': 'Haben Sie Fragen zum Spiel oder vielleicht Ideen oder Feedback, die Sie uns mitteilen möchten, können Sie gerne eine E-Mail senden an:',
+	'i_contact_p_2': 'Für Presse- und Medienanfragen <br> senden Sie bitte eine E-Mail an:',
+	'i_contact_p_3': 'Für Partnerschaftsanfragen <br> senden Sie bitte eine E-Mail an:',
+	'soon': 'Wir werden Ihnen so schnell wie möglich antworten!'	
+}
+
+
 </script>
 
 <style>
@@ -257,10 +341,10 @@ a
 
 	<header>
 		<a class="header_item left" href="#" onclick="showBlock('main_div');return false;"><img src="icon_big.png" id="small_icon"/></a>	
-		<a class="header_item left" href="#" onclick="showBlock('main_div');return false;">SUBWORDS</a>			
-		<a class="header_item_right" href="#" onclick="showBlock('contact_us');return false;">Contact us</a>
-		<a class="header_item_right" href="#" onclick="showBlock('about_us');return false;">About us</a>
-		<a class="header_item_right" href="#" onclick="showBlock('main_div');return false;">Home</a>
+		<a id = "i_sub" class="header_item left" href="#" onclick="showBlock('main_div');return false;">SUBWORDS</a>			
+		<a id = "i_contact" class="header_item_right" href="#" onclick="showBlock('contact_us');return false;">Contact us</a>
+		<a id = "i_about" class="header_item_right" href="#" onclick="showBlock('about_us');return false;">About us</a>
+		<a id = "i_home" class="header_item_right" href="#" onclick="showBlock('main_div');return false;">Home</a>
 	</header>
 	
 	<main class="">		
@@ -282,9 +366,9 @@ a
 					<td class="td_about"><img src="icon_big.png" class="vertical_align" /></td>
 					<td class="td_about">
 						<h1 class="info_text_header" id="header_text_about">About Us</h1>
-						<p class="info_text">Subwords was created and is owned by Elitsia AB, a Swedish company based in Gothenburg. The game was launched in December 2021 and in 2022 the plan is to release two other apps, a quiz game and a global dating app.</p>
-						<p class="info_text">We hope you like our game and we appreciate any feedback you would like to share so that we know how we can improve and develop the app further.</p>  
-						<p class="info_text">Good luck to beat your friends in multiplayer mode and we also hope you will be one of the few players who are able to pass all of the 100 levels.</p>		
+						<p id="i_about_p_1" class="info_text">Subwords was created and is owned by Elitsia AB, a Swedish company based in Gothenburg. The game was launched in December 2021 and in 2022 the plan is to release two other apps, a quiz game and a global dating app.</p>
+						<p id="i_about_p_2" class="info_text">We hope you like our game and we appreciate any feedback you would like to share so that we know how we can improve and develop the app further.</p>  
+						<p id="i_about_p_3" class="info_text">Good luck to beat your friends in multiplayer mode and we also hope you will be one of the few players who are able to pass all of the 100 levels.</p>		
 					</td>
 				  </tr>
 				</table>				
@@ -295,15 +379,15 @@ a
 					<td class=""><h2 id="header_text_contact">Contact Us</h2></td>					
 				  </tr>
 				  <tr class="contact_row">
-					<td class="contact_column"><p class="info_text no_vertical_margin">Do you have any questions related to the game or maybe have ideas or feedback to share, you are very welcome to send an e-mail to:</p></td>
+					<td class="contact_column"><p id="i_contact_p_1" class="info_text no_vertical_margin">Do you have any questions related to the game or maybe have ideas or feedback to share, you are very welcome to send an e-mail to:</p></td>
 					<td><button class="green_button">hello@subwords.com</button></td>
 				  </tr>
 				   <tr class="contact_row">
-					<td class="contact_column"><p class="info_text no_vertical_margin">For press and media inquiries <br> please send an e-mail to:</p></td>
+					<td class="contact_column"><p id="i_contact_p_2" class="info_text no_vertical_margin">For press and media inquiries <br> please send an e-mail to:</p></td>
 					<td><button class="green_button">media@subwords.com</button></td>
 				  </tr>
 				  <tr class="contact_row">
-					<td class="contact_column"><p class="info_text no_vertical_margin">For partnership enquiries please <br> send an e-mail to:<p></td>
+					<td class="contact_column"><p id="i_contact_p_3" class="info_text no_vertical_margin">For partnership enquiries please <br> send an e-mail to:<p></td>
 					<td><button class="green_button">partners@subwords.com</button></td>
 				  </tr>
 				  <tr>
@@ -317,9 +401,9 @@ a
 	</main>
 	<footer>
 		<span id="footer_copyright">© Copyright 2021 - Elitsia AB</span>
-		<a class="right language_icon" href="https://www.w3schools.com/"><img src="ger.png" /></a>
-		<a class="right language_icon" href="https://www.w3schools.com/"><img src="swe.png" /></a>
-		<a class="right language_icon" href="https://www.w3schools.com/"><img src="eng.png" /></a>	
+		<a class="right language_icon" href="#" onclick="Translate('ger');return false;"><img src="ger.png" /></a>
+		<a class="right language_icon" href="#" onclick="Translate('se');return false;"><img src="swe.png" /></a>
+		<a class="right language_icon" href="#" onclick="Translate('en');return false;"><img src="eng.png" /></a>	
 	</footer>
 	
 	
